@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para ti ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#fff5f7;color:#3b2028}
+#entrada{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#fff8fa,#ffdce5 50%,#f4a9b9);transition:1s}
+#entrada.cerrando{opacity:0;transform:scale(1.12);pointer-events:none}
+.entrada-contenido{max-width:650px;padding:30px;animation:aparecer 1.4s ease;position:relative;z-index:2}
+.sobre{font-size:75px;animation:flotar 3s ease-in-out infinite;margin-bottom:18px}
+.entrada-pequeno{font-size:15px;letter-spacing:4px;text-transform:uppercase;margin-bottom:15px}
+.entrada-contenido h1{font-size:48px;margin-bottom:20px}
+.entrada-texto{font-size:19px;line-height:1.7;margin-bottom:35px}
+#abrir{border:0;padding:16px 40px;border-radius:50px;background:#d94f70;color:#fff;font-size:18px;font-weight:bold;cursor:pointer;box-shadow:0 10px 30px #96325055;animation:pulso 2s infinite}
+.corazon{position:absolute;font-size:45px;color:#d94f7055;animation:subir 6s linear infinite}
+.corazon1{left:10%;bottom:-50px}.corazon2{left:30%;bottom:-100px;animation-delay:2s}.corazon3{right:20%;bottom:-80px;animation-delay:1s}.corazon4{right:8%;bottom:-50px;animation-delay:3s}
+@keyframes aparecer{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes flotar{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-15px) rotate(3deg)}}
+@keyframes pulso{50%{box-shadow:0 10px 45px #96325088}}
+@keyframes subir{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+#pagina{opacity:0;transition:opacity 1.5s}#pagina.visible{opacity:1}
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:30px;background:linear-gradient(#641e2d59,#641e2d80),url("portada.jpg");background-size:cover;background-position:center;color:white}
+.contenido{max-width:750px}.pequeno{font-size:15px;letter-spacing:4px;margin-bottom:20px}.hero h1{font-size:65px;margin-bottom:25px}.subtitulo{font-size:21px;line-height:1.7;margin-bottom:35px}
+.boton{display:inline-block;padding:15px 30px;background:#e85d7d;color:#fff;text-decoration:none;border-radius:30px;transition:.3s}
+.boton:hover{transform:scale(1.06)}
+.seccion{padding:90px 8%;text-align:center}.seccion h2{font-size:38px;margin-bottom:25px}
+.historia{display:flex;align-items:center;justify-content:center;gap:70px;background:#fff0f3}.historia-imagen{width:400px}.historia-imagen img{width:100%;border-radius:15px;transform:rotate(-3deg);box-shadow:0 15px 35px #0002}.historia-texto{max-width:550px;text-align:left}.historia-texto p{font-size:18px;line-height:1.8;margin-bottom:20px}
+.descripcion{font-size:18px;margin-bottom:40px}.galeria{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.foto{overflow:hidden;border-radius:20px;box-shadow:0 10px 30px #0002}.foto img{width:100%;height:350px;object-fit:cover;display:block;transition:.5s}.foto:hover img{transform:scale(1.08)}
+.playlist{background:linear-gradient(145deg,#1ed760,#128c3a);color:white;min-height:350px;border-radius:20px;padding:35px 25px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;box-shadow:0 15px 35px #0000002e;transition:.3s}.playlist:hover{transform:translateY(-8px)}.spotify-icon{font-size:55px;margin-bottom:15px}.playlist h3{font-size:27px;margin-bottom:12px}.playlist p{line-height:1.6;margin-bottom:25px}.spotify{background:white;color:#128c3a;font-weight:bold}.foto-abajo{max-width:350px;margin:25px auto 0}
+.razones{background:#ffe2e8}.tarjetas{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.tarjeta{background:white;padding:40px 25px;border-radius:20px;box-shadow:0 10px 25px #00000014;transition:.3s}.tarjeta:hover{transform:translateY(-10px)}.tarjeta span{font-size:45px}.tarjeta h3{font-size:22px;margin:18px 0}.tarjeta p{line-height:1.7}
+.carta{padding:100px 20px;background:linear-gradient(135deg,#eeb1bd,#ffdce3)}.hoja{position:relative;max-width:750px;margin:auto;background:#fffaf4;padding:55px;box-shadow:0 20px 50px #00000026;transform:rotate(-1deg)}.hoja h2{font-size:36px;margin-bottom:30px}.hoja p{font-size:18px;line-height:1.9;margin:18px 0}.decoracion-carta{font-size:45px;position:absolute;right:30px;top:20px}.firma{text-align:right;margin-top:40px!important}
+.final{text-align:center;padding:120px 20px;background:#fff5f7}.final-corazon{font-size:70px;color:#d94f70;animation:latido 1.5s infinite}.final h2{font-size:38px;margin:25px 0}.final p{font-size:19px}.infinito{font-size:55px;margin:25px}@keyframes latido{50%{transform:scale(1.2)}}footer{text-align:center;padding:40px;background:#3b2028;color:white}
+.boton-musica{position:fixed;right:20px;bottom:20px;z-index:1000;width:55px;height:55px;border:0;border-radius:50%;background:#d94f70;color:#fff;font-size:22px;cursor:pointer;box-shadow:0 5px 20px #0003}
+@media(max-width:700px){.entrada-contenido h1{font-size:38px}.hero h1{font-size:43px}.subtitulo{font-size:18px}.historia{flex-direction:column;gap:40px}.historia-imagen{width:90%}.historia-texto{text-align:center}.galeria{grid-template-columns:1fr}.tarjetas{grid-template-columns:1fr}.hoja{padding:35px 25px}.hoja h2{font-size:30px}}
+</style>
+</head>
+<body>
+<div id="entrada">
+<div class="corazon corazon1">♡</div><div class="corazon corazon2">♡</div><div class="corazon corazon3">♡</div><div class="corazon corazon4">♡</div>
+<div class="entrada-contenido"><div class="sobre">💌</div><p class="entrada-pequeno">Tengo algo para ti...</p><h1>Una pequeña sorpresa ❤️</h1><p class="entrada-texto">He preparado este pequeño espacio especialmente para ti.</p><button id="abrir">Abrir ❤️</button></div>
+</div>
+<audio id="musica" loop><source src="musica.mp3" type="audio/mpeg"></audio>
+<main id="pagina">
+<section class="hero"><div class="contenido"><p class="pequeno">PARA MI PERSONA FAVORITA</p><h1>Para ti, mi princesa 💗</h1><p class="subtitulo">Hay personas que llegan a tu vida y hacen que todo sea más bonito y tu haces mi vida hermosa.</p><a href="#historia" class="boton">Te dedico mi vida y esta pagina 🤍 ↓</a></div></section>
+<section class="seccion recuerdos">
+<h2>La musica es la forma mas bonita de recordar cuanto te amo 🎵</h2><p class="descripcion">dedicarte musica es mi forma mas bonita de decirte te amo.</p>
+<div class="galeria">
+<div class="foto"><img src="foto1.jpeg" alt="Recuerdo 1"></div>
+<div class="playlist"><div class="spotify-icon">🎵</div><h3>Nuestra playlist</h3><p>Canciones que me hacen pensar en ti ❤️</p><a href="https://open.spotify.com/playlist/4ZLovCVEhICMhUFF7GQbwR?si=R8Is-dLZSXa3_XFf2k5Aew&utm_source=copy-link&pi=MOUpe-0PTA2rv" target="_blank" class="boton spotify">Escuchar en Spotify</a></div>
+<div class="foto"><img src="foto2.jpeg" alt="Recuerdo 2"></div>
+</div>
+<div class="foto foto-abajo"><img src="foto3.jpeg" alt="Recuerdo 3"></div>
+</section>
+<section class="seccion razones"><h2>Algunas razones por las que te quiero ❤️</h2><div class="tarjetas">
+<div class="tarjeta"><span>❤️</span><h3>Tu forma de ser</h3><p>Me encanta la persona que eres y me haces sentir amado todos los dias y cariño yo te amo. </p></div>
+<div class="tarjeta"><span>✨</span><h3>Tu sonrisa</h3><p>Siempre logra hacer mis días super especiales y hacerme entender que siempre hay algo bonito en cada dia </p></div>
+<div class="tarjeta"><span>🫶</span><h3>Los divertida que eres</h3><p>Cada momento a tu lado se vuelve un recuerdo especial y siempre estara en mi corazon.</p></div>
+</div></section>
+<section class="carta"><div class="hoja"><div class="decoracion-carta">🌸</div><h2>Una carta para ti 💌</h2><p>Querida Dayana:</p><p>Quería hacerte este pequeña pagina porque a veces las palabras no son suficientes para decir todo lo que siento por ti ya que de vdd muero de amor por ti.</p><p>Gracias por estar conmigo, por las risas, por los momentos bonitos y simplemente por ser tú, quiero hacerte sentir amada porque amor,eres muy amada por mi.</p><p>Espero que podamos seguir escribiendo nuestra historia juntos y que todavía nos queden muchísimos recuerdos por crear. Por cierto la musica le pondre mas te amooo</p><p class="firma">Con mucho cariño,<br><strong>Tu niño chiquito ❤️</strong></p></div></section>
+<section class="final"><div class="final-corazon">♥</div><h2>Y esto apenas es el comienzo...</h2><p>Gracias por formar parte de mi historia. ❤️</p><div class="infinito">∞</div><p>Siempre tú.</p></section>
+<footer><p>Hecho especialmente para ti ❤️</p></footer>
+</main>
+<button id="botonMusica" class="boton-musica">🔊</button>
+<script>
+const entrada=document.getElementById("entrada"),pagina=document.getElementById("pagina"),abrir=document.getElementById("abrir"),musica=document.getElementById("musica"),botonMusica=document.getElementById("botonMusica");
+abrir.addEventListener("click",()=>{musica.play().catch(()=>{});entrada.classList.add("cerrando");setTimeout(()=>{entrada.style.display="none";pagina.classList.add("visible")},1000)});
+botonMusica.addEventListener("click",()=>{if(musica.paused){musica.play();botonMusica.textContent="🔊"}else{musica.pause();botonMusica.textContent="🔇"}});
+</script>
+</body>
+</html>
